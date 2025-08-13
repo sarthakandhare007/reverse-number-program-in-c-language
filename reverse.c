@@ -1,18 +1,17 @@
-#include <stdio.h>
+void main()
+{
+int s=0,x,y,r;
 
-int main() {
-    int num, reversed = 0, remainder;
+printf("Enter a Number:");
+scanf("%d",&x);
 
-    printf("Enter a number: ");
-    scanf("%d", &num);
+while(x!=0)
+{
+r=x%10;
+s=(s*10)+r;
+x=x/10;
 
-    while (num != 0) {
-        remainder = num % 10;              // Get last digit
-        reversed = reversed * 10 + remainder; // Append to reversed number
-        num = num / 10;                    // Remove last digit
-    }
+}
+printf("Reverse Number is %d",s);
 
-    printf("Reversed number: %d\n", reversed);
-
-    return 0;
 }
